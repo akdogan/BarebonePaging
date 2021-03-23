@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/listview_thumbnail"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/end_margin"
+        android:layout_marginBottom="@dimen/end_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:scaleType="centerInside"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/class_symb_wizard" />
+
+    <TextView
+        android:id="@+id/listview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/listview_class"
+        app:layout_constraintStart_toEndOf="@id/listview_thumbnail"
+        app:layout_constraintTop_toTopOf="@id/listview_thumbnail"
+        tools:text="Tinnaveer Tidaan" />
+
+    <TextView
+        android:id="@+id/listview_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/listview_race"
+        app:layout_constraintStart_toEndOf="@id/listview_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/listview_name"
+        tools:text="Druid" />
+
+    <TextView
+        android:id="@+id/listview_race"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/listview_info"
+        app:layout_constraintStart_toEndOf="@id/listview_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/listview_class"
+        tools:text="Orc" />
+
+    <TextView
+        android:id="@+id/listview_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toBottomOf="@id/listview_thumbnail"
+        app:layout_constraintStart_toEndOf="@id/listview_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/listview_race"
+        tools:text="29, Male" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
